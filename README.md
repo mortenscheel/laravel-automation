@@ -38,7 +38,7 @@ protected function schedule(Schedule $schedule)
 Custom classes that are responsible for discovering models that meet their criteria.
 
 ### `AutomationAction` classes
-Custom Job classes that perform an action on an model.
+Custom Job classes that perform an action on a model.
 
 ### `Automation` model
 A concrete automation workflow that combines an `AutomationTrigger` with an `AutomationAction`. 
