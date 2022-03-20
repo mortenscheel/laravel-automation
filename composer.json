@@ -1,8 +1,7 @@
 {
     "name": "mortenscheel/laravel-automation",
-    "description": "This is my package laravel-automation",
+    "description": "Laravel automation framework",
     "keywords": [
-        "Scheel",
         "laravel",
         "laravel-automation"
     ],
