@@ -1,0 +1,63 @@
+{
+    "name": "mortenscheel/laravel-automation",
+    "description": "This is my package laravel-automation",
+    "keywords": [
+        "Scheel",
+        "laravel",
+        "laravel-automation"
+    ],
+    "homepage": "https://github.com/scheel/laravel-automation",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Morten Scheel",
+            "email": "morten@mortenscheel.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/contracts": "^9.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "nunomaduro/collision": "^6.0",
+        "orchestra/testbench": "^7.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Scheel\\Automation\\": "src",
+            "Scheel\\Automation\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Scheel\\Automation\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "XDEBUG_MODE=coverage vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Scheel\\Automation\\LaravelAutomationServiceProvider"
+            ],
+            "aliases": {
+                "LaravelAutomation": "Scheel\\Automation\\Facades\\LaravelAutomation"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
